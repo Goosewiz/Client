@@ -1,0 +1,11 @@
+syntax = "proto3";
+package com.example.grpc;
+message IncomingRequest{
+  string name = 1;
+}
+message OutgoingResponse{
+  string answer = 1;
+}
+service Service {
+  rpc exchange(IncomingRequest) returns (OutgoingResponse);
+}
